@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<label for="v">Enter the amount of vouchers you want in total:</label><br>
+<input type="number" id="v" value="0"><br>
+<label for="va">How many vouchers do you have already?:</label><br>
+<input type="number" id="va" value="0"><br>
+<label for="smoney">Do you have any stolen money which hasn't been turned in for vouchers already?:</label><br>
+<input type="number" id="smoney" value="0"><br>
+<button onclick="calculate()">calculate</button><br>
+<h2 id="output"></h2>
+
+<script type="">
+    function calculate(){
+      var v = document.getElementById('v').value;
+    var va = document.getElementById('va').value;
+    var smoney = document.getElementById('smoney').value;
+    var output = document.getElementById('output');
+    
+    var vm = v-va;
+    
+    output.innerText = "For "+vm+" ammount of vouchers you will need: "+((vm/75)*10000-smoney)+" stolen money.";
+    
+  }
+</script>
+
+</body>
+</html>
